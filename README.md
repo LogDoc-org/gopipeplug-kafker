@@ -161,11 +161,6 @@ logdoc {
 
           properties {
             bootstrap.servers = "localhost:9092" # Сервера Кафка
-
-            key.serializer = "org.apache.kafka.common.serialization.StringSerializer"
-            value.serializer = "org.apache.kafka.common.serialization.StringSerializer"
-            key.deserializer = "org.apache.kafka.common.serialization.StringDeserializer"
-            value.deserializer = "org.apache.kafka.common.serialization.StringDeserializer"
           }
         }
 
