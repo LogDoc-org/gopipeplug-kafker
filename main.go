@@ -54,8 +54,13 @@ func New() *Kafker {
 }
 
 func (k *Kafker) Configure(config *hocon.Config) error {
-	if k.configured || config == nil {
+	if k.configured {
 		return nil
+	}
+
+	if config == nil {
+		log.Print("Ошибка, не указан config")
+		return fmt.Errorf("ошибка, не указан config")
 	}
 
 	properties := make(map[string]interface{})
